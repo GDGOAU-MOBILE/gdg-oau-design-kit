@@ -1,0 +1,132 @@
+{
+  "_comment": "SAMPLE ONLY. Northwind Bank, its people and these numbers are fictional. Copy this folder per partner and replace every value with sourced facts.",
+  "output": "GDGOAU Build Day 2027 - Northwind Bank (sample).pptx",
+  "organiser": { "name": "GDG on Campus OAU", "short": "GDG on Campus OAU" },
+  "partner": {
+    "name": "Northwind Bank",
+    "short": "Northwind",
+    "stickerName": "Northwind Bank",
+    "color": "0F766E",
+    "tint": "DDF3F0",
+    "light": "8FD9CF",
+    "logo": "partner-logo.png",
+    "leader": { "name": "Ada Example", "short": "Mrs Example", "title": "MD/CEO" },
+    "product": { "name": "NorthPay", "icon": "product-icon.png" }
+  },
+  "event": {
+    "name": "GDGOAU Build Day 2027",
+    "date": "Saturday, 17 April 2027",
+    "dateShort": "Sat, 17 Apr 2027",
+    "time": "10:00 am to 4:00 pm",
+    "venue": "BOOA, OAU",
+    "students": "500+",
+    "companies": "8+"
+  },
+  "contact": {
+    "name": "Your Name",
+    "role": "Your role, GDGOAU",
+    "lines": [["Email", "Outreach@gdgoau.com"], ["Web", "gdgoau.com"]]
+  },
+  "slides": {
+    "cover": {
+      "title": "GDGOAU\nBuild Day 2027",
+      "subtitle": [["Building with mentors at "], ["OAU", "link"]],
+      "pills": [["Sat, 17 Apr 2027", 1.85], ["BOOA, OAU", 1.45]]
+    },
+    "gap": {
+      "title": [["Builders need "], ["mentors", "link"]],
+      "subtitle": "Many students can code. Few have shipped a product with someone experienced beside them.",
+      "sides": [
+        { "heading": "Students", "icon": "MdSchool", "body": "They learn alone from videos, so their projects stall at the first hard problem.", "label": "WHAT THEY NEED", "chips": [["Mentors", 0.95], ["Code review", 1.2], ["A deadline", 1.1]] },
+        { "heading": "Companies", "icon": "MdBusinessCenter", "body": "They want to spot builders early, but rarely see students work on real problems.", "label": "WHAT THEY LOOK FOR", "chips": [["SIWES", 0.8], ["Internships", 1.1], ["Graduate roles", 1.35]] }
+      ]
+    },
+    "event": {
+      "title": [["Building comes to "], ["OAU", "link"]],
+      "subtitle": "{event.date}, {event.time}, at {event.venue}.",
+      "label": "WHAT HAPPENS ON THE DAY",
+      "items": [
+        ["Team builds with mentors", "Teams of four build a working prototype, with a mentor checking in every hour."],
+        ["Demo session", "Each team shows what it built in three minutes. Judges pick the top three."],
+        ["Talks and a panel", "Engineers talk about how they ship software, then take questions."]
+      ],
+      "also": [["Exhibition booths", 1.35], ["Code review desk", 1.35], ["Lunch for everyone", 1.45]]
+    },
+    "room": {
+      "title": [["{event.students} students, {event.companies} companies, "], ["one day", "link"]],
+      "subtitle": "From first-year beginners to final-year developers, with the companies that want to meet them.",
+      "stats": [["{event.students}", "students expected", "OAU students and invited guests"], ["{event.companies}", "companies expected", "With their engineers as mentors"], ["1", "day at BOOA", "{event.time}"]],
+      "organiserLabel": "RUN BY GDGOAU",
+      "organiserText": "The Google Developer Group at OAU. Replace this line with your real track record, for example past events and their attendance."
+    },
+    "why": {
+      "title": [["Why "], ["{partner.name}", "partner"], [" fits this day"]],
+      "subtitle": "Three researched links between {partner.name} and these students.",
+      "cards": [
+        ["An OAU alumna leads {partner.short}", "Replace with a sourced fact, for example where a leader studied.", "MdSchool", "partner"],
+        ["{product.name} fits how they pay", "Replace with why the partner's product suits students.", "MdPhoneIphone", "blue"],
+        ["You already back young builders", "Replace with a named programme the partner runs, with a source.", "MdLightbulb", "yellow"]
+      ],
+      "sources": "List the sources for every fact on this slide here."
+    },
+    "invitation": {
+      "title": [["An invitation to "], ["{leader.short}", "partner"]],
+      "subtitle": "We would be honoured to have her open the day as Patron of the Day and keynote speaker.",
+      "schedule": [["10:00", "Welcome to GDGOAU", false], ["10:15", "Proposed keynote: {leader.short}, {leader.title}, {partner.name}", true], ["10:30", "Build session begins", false], ["1:00", "Lunch and exhibition", false]],
+      "roles": [["Patron of the Day", 1.8, "partner"], ["Keynote speaker", 1.65, "blue"]],
+      "body": "{leader.short} studied at OAU before going on to lead {partner.name}. Hearing that path first-hand would mean a great deal to the students in the hall.",
+      "notes": "Confirm the title and form of address with the partner before sending."
+    },
+    "product": {
+      "title": [["Helping every builder try "], ["{product.name}", "light"]],
+      "subtitle": "Four ways we would build {product.name} into the day. Signing up stays each student's choice.",
+      "steps": [
+        ["Sign up early", "The registration page links to the {product.name} app for anyone who wants it.", "MdHowToReg"],
+        ["Help at the gate", "With {partner.short}'s support, a desk at check-in could help students sign up.", "MdQrCode2"],
+        ["Lunch on {product.name}", "Lunch packs carry the {product.name} brand.", "MdLunchDining"],
+        ["Prizes into {product.name}", "Winning teams receive their prize money in {product.name}, on stage.", "MdEmojiEvents"]
+      ],
+      "notes": "Proposed mechanics. Confirm with the partner before sending."
+    },
+    "benefits": {
+      "title": [["What "], ["{partner.name}", "partner"], [" gets"]],
+      "subtitle": "One day at BOOA, and the numbers to show for it afterwards.",
+      "items": [
+        ["{product.name} sign-ups from {event.students} students", "We would share sign-up and check-in numbers in the post-event report.", "MdPersonAdd", "partner"],
+        ["The opening keynote", "If {leader.short} accepts our invitation, her keynote would open the day.", "MdMic", "blue"],
+        ["Your brand across BOOA", "On the hall screens, banners, flyers, registration page and lunch packs.", "MdCampaign", "red"],
+        ["Early access to talent", "Meet builders at work, and receive CVs from students who consent to share them.", "MdWork", "green"],
+        ["Build Day presented by {partner.short}", "As Title Partner, your name leads the event across our channels.", "MdStars", "yellow"],
+        ["Proof afterwards", "A post-event report and a highlight video.", "MdInsights", "blue"]
+      ]
+    },
+    "ask": {
+      "title": [["What it "], ["takes", "link"]],
+      "subtitle": "The full event costs ₦2M to ₦2.5M. We would be grateful for support with all of it or part of it.",
+      "options": [
+        ["THE FULL EVENT", "₦2M to ₦2.5M", "Title Partner, with every benefit on the previous slide.", "partner"],
+        ["DIAMOND PARTNER", "₦800K", "Opening address, a featured slot, premium booth and your logo on all materials.", "blue"],
+        ["GOLD PARTNER", "₦400K", "Per segment: prizes, tech and power, or the exhibition.", "yellow"]
+      ],
+      "sticker": "Our ask",
+      "payment": "Payments go to the official GDGOAU club account, with details issued in the partnership agreement. A deposit on confirmation, and the balance by an agreed date.",
+      "notes": "Tiers and prices must match the source proposal exactly."
+    },
+    "budget": {
+      "title": [["Where the "], ["money goes", "link"]],
+      "subtitle": "Every naira goes into delivering the day. The estimated budget is ₦2M to ₦2.5M.",
+      "total": "₦2M to ₦2.5M",
+      "lines": [["Venue, power, sound and stage", 30], ["Build zone and equipment", 18], ["Prizes", 14], ["Mentors, speakers and hospitality", 10], ["Refreshments", 10], ["Publicity and registration", 6], ["Photography and video", 4], ["Contingency", 8]],
+      "receipts": "Spending has receipts, and partners get a post-event report.",
+      "notes": "Lines must add up to 100 and match the source budget. Check that any unit cost you quote elsewhere fits its line."
+    },
+    "close": {
+      "title": [["Let's build this "], ["together", "red"]],
+      "steps": [
+        ["Share your interest", "A reply or an email is all we need, and we can work with your planning timeline."],
+        ["The agreement", "We would send a short partnership agreement, with payment details and a request for your logo."],
+        ["Join us on 17 Apr", "We would share booth details with the agreement, and would be glad to welcome your team."]
+      ]
+    }
+  }
+}

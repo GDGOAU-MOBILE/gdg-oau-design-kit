@@ -1,0 +1,36 @@
+{
+  "name": "gdg-oau-design-kit",
+  "version": "1.0.0",
+  "description": "The GDG on Campus OAU design and writing system as an agent skill: brand, components, assets, humanizer and templates for slides, PDFs, websites and social.",
+  "bin": {
+    "gdg-oau-design-kit": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    "SKILL.md",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "references",
+    "tokens",
+    "assets",
+    "templates/web",
+    "templates/pitch-deck/build.js",
+    "templates/pitch-deck/package.json",
+    "templates/pitch-deck/README.md",
+    "templates/pitch-deck/sample/deck.config.json",
+    "templates/pitch-deck/sample/partner-logo.png",
+    "templates/pitch-deck/sample/product-icon.png"
+  ],
+  "keywords": ["gdg", "gdg-on-campus", "oau", "design-system", "claude-skill", "agent-skill", "pitch-deck"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GDGOAU-MOBILE/gdg-oau-design-kit.git"
+  },
+  "homepage": "https://github.com/GDGOAU-MOBILE/gdg-oau-design-kit#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

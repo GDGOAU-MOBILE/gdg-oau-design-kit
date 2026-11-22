@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GDGOAU starter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Code:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../tokens/tokens.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font-sans); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink); background: var(--white); }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--gutter); }
+
+    .gdg-section { padding: var(--space-6) 0; }
+    @media (min-width: 768px) { .gdg-section { padding: var(--space-9) 0; } }
+    .gdg-section--blue { background: var(--bg-blue); }
+    .gdg-section--yellow { background: var(--bg-yellow); }
+    .gdg-section--pink { background: var(--bg-pink); }
+    .gdg-section--green { background: var(--bg-green); }
+    .gdg-section--dark { background: var(--black-02); color: var(--white); }
+
+    .gdg-label { font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--ink-muted); margin: 0 0 var(--space-1); }
+    .gdg-title { font-size: var(--fs-title); font-weight: 700; line-height: 1.15; margin: 0 0 var(--space-1); }
+    .gdg-title .hl { color: var(--link); }
+    .gdg-sub { color: var(--ink-muted); margin: 0 0 var(--space-4); max-width: 60ch; }
+
+    .gdg-grid { display: grid; gap: var(--space-2); grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .gdg-grid { gap: var(--space-3); grid-template-columns: repeat(3, 1fr); } }
+
+    .gdg-card { --shadow: var(--gdg-blue); position: relative; background: var(--white); border: var(--outline); border-radius: var(--radius-card); padding: var(--space-3); box-shadow: var(--shadow-offset) var(--shadow-offset) 0 -2px var(--shadow), var(--shadow-offset) var(--shadow-offset) 0 0 var(--ink); transition: transform 150ms var(--ease), box-shadow 150ms var(--ease); -webkit-tap-highlight-color: transparent; color: var(--ink); }
+    .gdg-card--red { --shadow: var(--gdg-red); }
+    .gdg-card--yellow { --shadow: var(--gdg-yellow); }
+    .gdg-card--green { --shadow: var(--gdg-green); }
+    .gdg-card--partner { --shadow: var(--partner); }
+    a.gdg-card:hover, a.gdg-card:focus-visible { transform: translate(-2px, -2px); box-shadow: var(--shadow-offset-hover) var(--shadow-offset-hover) 0 -2px var(--shadow), var(--shadow-offset-hover) var(--shadow-offset-hover) 0 0 var(--ink); }
+    .gdg-card h3 { font-size: var(--fs-card-title); margin: var(--space-2) 0 var(--space-1); }
+    .gdg-card p { margin: 0; color: var(--ink-muted); font-size: var(--fs-small); }
+
+    .gdg-dot { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: var(--outline-thin); background: var(--gdg-blue); color: var(--white); font-weight: 700; }
+    .gdg-dot--red { background: var(--gdg-red); }
+    .gdg-dot--yellow { background: var(--gdg-yellow); color: var(--ink); }
+    .gdg-dot--green { background: var(--gdg-green); }
+
+    .gdg-pill { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-3); border: var(--outline-thin); border-radius: var(--radius-pill); background: var(--chip); color: var(--ink); font-weight: 700; font-size: var(--fs-small); text-decoration: none; }
+    .gdg-pill--primary { background: var(--ink); color: var(--white); }
+    .gdg-sticker { position: absolute; top: -16px; right: 16px; transform: rotate(5deg); background: var(--gdg-yellow); }
+
+    .gdg-codebar { font-family: var(--font-mono); background: var(--ink); color: var(--white); border-radius: 12px; padding: var(--space-2) var(--space-3); }
+    .gdg-codebar .prompt { color: var(--gdg-green); }
+
+    :focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <section class="gdg-section gdg-section--blue">
+    <div class="wrap">
+      <p class="gdg-label">GDG on Campus OAU</p>
+      <h1 class="gdg-title">Build with us at <span class="hl">OAU</span></h1>
+      <p class="gdg-sub">A starter page wired to the GDGOAU tokens. Replace the copy, keep the components.</p>
+      <div class="gdg-grid">
+        <a class="gdg-card" href="#"><span class="gdg-dot">1</span><h3>Learn</h3><p>Study jams and workshops every month.</p></a>
+        <a class="gdg-card gdg-card--red" href="#"><span class="gdg-dot gdg-dot--red">2</span><h3>Build</h3><p>Hackathons with mentors from industry.</p></a>
+        <a class="gdg-card gdg-card--yellow" href="#"><span class="gdg-sticker gdg-pill">Open now</span><span class="gdg-dot gdg-dot--yellow">3</span><h3>Ship</h3><p>Demo days where projects meet users.</p></a>
+      </div>
+      <p style="margin-top: var(--space-4)"><a class="gdg-pill gdg-pill--primary" href="#">Join the community</a></p>
+    </div>
+  </section>
+  <section class="gdg-section">
+    <div class="wrap">
+      <p class="gdg-label">Get started</p>
+      <div class="gdg-codebar"><span class="prompt">$</span> npx github:GDGOAU-MOBILE/gdg-oau-design-kit</div>
+    </div>
+  </section>
+</body>
+</html>
