@@ -124,10 +124,32 @@ Web equivalents live in `tokens/tokens.css` (8px base grid, 24px card radius, 6p
 | `assets/brand/elements.png` | Official line icons: asterisk, dots, arrow, brace, globe, slashes | Reference for drawing motifs, stickers |
 | `assets/brand/sticker.png` | GDG die-cut sticker | Covers, swag mockups |
 | `assets/brand/arrow-hand.png` | Hand-drawn arrow | Pointing at one thing, once per piece |
-| `assets/campus/oau-gate.png` | Line drawing of BOOA, OAU | Campus and venue moments |
+| `assets/campus/oau-gate.png` | Line drawing of an OAU landmark | Campus moments. Do not caption it as the venue unless it is the venue. |
+| `assets/brand/banners/strip-*.png` | Official thin web banners (blue, pink, yellow) with arches, pill, notched panel and the GDG lockup | Email headers, web section tops, document headers |
+| `assets/brand/banners/banner-*.png` | Official wide banners (blue, pink, green, yellow): globe, arrow, slashes, three circles, "Google Developer Groups" | LinkedIn/X headers, roll-up banner tops, wide slide headers |
+| `assets/brand/element-art-blue.png` | Official element art: globe, people, lockup, arches, pill | Section break art, social posts |
+| `assets/brand/badges/badge-*.png` | Official profile badges (globe, quote, people) | Avatars, speaker cards, community icons |
+| `assets/photos/*.webp` | Real GDGOAU event photos from gdgoau.com (class, code, team) | Proof that the chapter runs real events. Prefer these to stock photos. |
+| `assets/photos/*-notched.png` | The same photos clipped to the notched GDG photo frame with an ink outline | Slides and documents; put the GDG mark in the top-left notch |
+| `assets/motifs/*.svg` | The website's vector motifs: arches, star (asterisk), slashes (outline and filled), globe, three circles, brace, arrows, pill, panel, frame-window | Small accents on slides and pages; recolour by editing the SVG |
+| `assets/motifs/*.png` | High-resolution PNGs of star, arches, slashes-outline and globe | Placing motifs in PowerPoint |
+| `assets/motifs/frame-window.svg` | The notched photo-frame path from the GDG Figma UI kit | Clipping any photo to the house frame |
 
 House motif: white cards with a thick ink outline and a hard offset shadow in a core colour. Repeat it
 everywhere. Do not mix in soft drop shadows, gradients or glassmorphism.
+
+### Using motifs (strict)
+
+The brand is more than cards. Use the official elements the way the brand guide and gdgoau.com do:
+
+- At most one small motif per slide or section (star, arches, slashes or globe), in ink, placed beside a
+  short title or in the empty corner of a card. Never behind text and never as a row of decorations.
+- Photo frames always use the notched frame (`frame-window.svg`), an ink outline and the GDG mark in the
+  top-left notch, as on gdgoau.com.
+- Banners and strips are used whole. Do not crop the lockup out of them or stretch them.
+- Patterns are for full-bleed covers and closings with a white card on top; never behind body text.
+- Use real GDGOAU photos when you show people. Ask before using a photo of an identifiable person in
+  material that goes to a partner.
 
 ## Partner accent
 

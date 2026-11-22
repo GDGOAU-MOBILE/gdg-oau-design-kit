@@ -38,6 +38,16 @@ Optional slides:
 - Leave out `partner.product` or `slides.product` to drop the product slide.
 - Leave out `slides.budget` to drop the budget slide.
 
+The "who is in the room" slide shows two real photos in notched frames. Set `slides.room.photos` to files
+in `assets/photos/` (default: `class-notched.png` and `team-notched.png`), `slides.room.organiserHeadline` to
+one bold line (for example "The Career Fair is our biggest event yet") and `slides.room.organiserText` to the
+track record with real numbers.
+
+Add one motif beside a title with `"motif": { "name": "star", "x": 6.05 }` on `why`, `invitation` or
+`benefits`. Names: `star`, `arches`, `slashes-outline`, `globe`. Render first, then set `x` so the motif
+sits about 0.2 in after the last word. Without `x` the position is estimated, and the motif is skipped if
+it could collide with the logos.
+
 Icons are Material Design names from `react-icons/md`, for example `MdSchool`, `MdMic`, `MdWork`.
 
 ## Checks built in

@@ -10,7 +10,7 @@ description: |
   in the GDGOAU style.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   owner: GDGOAU-MOBILE
 ---
 
@@ -36,7 +36,7 @@ user overrides it in this conversation.
 | `references/review.md` | Before you deliver. The partner's-eye review. |
 | `references/questions.md` | At the start. The intake questions you must ask. |
 | `tokens/tokens.css`, `tokens/tokens.json` | The design tokens. Use them; never retype values. |
-| `assets/` | Official brand art and campus art. See `brand.md` for what each file is for. |
+| `assets/` | Official brand art (patterns, banners, badges), website motifs, real GDGOAU photos and campus art. See `brand.md` for what each file is for and the motif rules. |
 | `templates/pitch-deck/` | A config-driven PowerPoint generator for partner pitches. |
 | `templates/web/` | A starter page wired to the tokens and components. |
 
@@ -72,6 +72,8 @@ These come from real feedback on GDGOAU decks. Each one has cost a review round 
 - No chapter trackers or numbering such as "01 THE GAP / 02 THE FAIR". It reads as AI-made.
 - No "NEXT →" bars, arrows-as-decoration or "Here is what comes next" connector strips.
 - No accent lines under titles and no coloured stripes down the side of cards or slides.
+- No flat decks. Every deck uses an official pattern on the cover and closing, real GDGOAU photos in notched
+  frames at least once, and one small motif on two or three content slides (never more than one per slide).
 - No captions that repeat what the page already says (for example a venue label under a venue drawing when
   the venue is already in a pill).
 - No commands to the partner. Ask, invite, offer: "We would be honoured to…", "If you would like…",

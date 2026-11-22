@@ -19,9 +19,18 @@ rights to them.
 Google Sans and Roboto Mono are not bundled. Both are available from Google Fonts under the SIL Open Font
 License.
 
+## Website motifs and photos
+
+`assets/motifs/` holds the vector motifs from the gdgoau.com source (drawn from the GDG Figma UI kit), and
+`assets/photos/` holds GDGOAU event photos from the same site. They are GDGOAU and Google brand material
+for GDG on Campus OAU use only.
+
+Banners, strips, badges and element art in `assets/brand/banners/`, `assets/brand/badges/` and
+`assets/brand/element-art-blue.png` come from the GDG On Campus brand guidelines.
+
 ## Campus art
 
-`assets/campus/oau-gate.png` (a line drawing of BOOA at Obafemi Awolowo University) is GDGOAU artwork from
+`assets/campus/oau-gate.png` (a line drawing of an OAU landmark) is GDGOAU artwork from
 the chapter website.
 
 ## Partner material

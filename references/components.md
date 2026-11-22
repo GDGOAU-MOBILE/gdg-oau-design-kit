@@ -75,3 +75,20 @@ mono kicker, 36 pt two-line title, a one-line subtitle, fact pills, and an illus
 
 Pink pattern full bleed, white card, "Let's build this together" (or a similar invitation), three
 numbered steps written as offers, and a contact box in `#E8F6FA`.
+
+## Notched photo frame
+
+The house photo frame from the GDG Figma UI kit (`assets/motifs/frame-window.svg`): the photo is clipped
+to the notched shape, outlined in ink, and the GDG mark sits in the top-left notch. Two or three frames
+side by side read as "real events". Ready-made examples: `assets/photos/*-notched.png`.
+
+## Organiser strip
+
+A wide card with no shadow: two notched photos on the left, then a mono label ("RUN BY GDGOAU"), one bold
+line (for example "The Career Fair is our biggest event yet"), one muted line of track record with real
+numbers, and one small motif in the right corner.
+
+## Motif accent
+
+One small ink motif (star, arches, slashes outline or globe) beside a short title or in a free corner.
+Sizes on slides: star 0.4 in, arches 1.2 × 0.2 in, slashes 0.6 × 0.5 in, globe 0.5 in.

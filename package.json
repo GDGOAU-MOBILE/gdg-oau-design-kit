@@ -1,6 +1,6 @@
 {
   "name": "gdg-oau-design-kit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The GDG on Campus OAU design and writing system as an agent skill: brand, components, assets, humanizer and templates for slides, PDFs, websites and social.",
   "bin": {
     "gdg-oau-design-kit": "bin/install.js"

@@ -213,15 +213,9 @@ Rules for pages live in [`references/web.md`](references/web.md).
 
 ## Assets
 
-| File | Use |
-|---|---|
-| `assets/brand/gdg-mark.png`, `gdg-mark-large.png` | GDG mark for headers and covers |
-| `assets/brand/pattern-yellow.png`, `-blue`, `-pink` | Official element patterns for full-bleed covers and closings |
-| `assets/brand/frame-blue.png`, `-yellow`, `-pink` | Notched frames for section breaks |
-| `assets/brand/elements.png` | Official line icons (asterisk, dots, brace, globe, slashes) |
-| `assets/brand/sticker.png` | GDG die-cut sticker |
-| `assets/brand/arrow-hand.png` | Hand-drawn arrow, once per piece |
-| `assets/campus/oau-gate.png` | Line drawing of BOOA, OAU |
+Everything below comes from the official GDG On Campus brand guide or from gdgoau.com.
+
+### Patterns, banners and badges (brand guide)
 
 <p align="center">
   <img src="assets/brand/pattern-blue.png" alt="Blue brand pattern" width="32%" />
@@ -229,12 +223,45 @@ Rules for pages live in [`references/web.md`](references/web.md).
   <img src="assets/brand/pattern-pink.png" alt="Pink brand pattern" width="32%" />
 </p>
 <p align="center">
-  <img src="assets/brand/elements.png" alt="Brand line icons" width="24%" />
-  <img src="assets/campus/oau-gate.png" alt="BOOA line drawing" width="30%" />
-  <img src="assets/brand/sticker.png" alt="GDG sticker" width="28%" />
+  <img src="assets/brand/banners/banner-blue.png" alt="Blue banner" width="24%" />
+  <img src="assets/brand/banners/banner-pink.png" alt="Pink banner" width="24%" />
+  <img src="assets/brand/banners/banner-green.png" alt="Green banner" width="24%" />
+  <img src="assets/brand/banners/banner-yellow.png" alt="Yellow banner" width="24%" />
+</p>
+<p align="center">
+  <img src="assets/brand/banners/strip-blue.png" alt="Blue strip" width="32%" />
+  <img src="assets/brand/banners/strip-pink.png" alt="Pink strip" width="32%" />
+  <img src="assets/brand/banners/strip-yellow.png" alt="Yellow strip" width="32%" />
+</p>
+<p align="center">
+  <img src="assets/brand/element-art-blue.png" alt="Element art" width="30%" />
+  <img src="assets/brand/badges/badge-globe.png" alt="Globe badge" width="18%" />
+  <img src="assets/brand/badges/badge-quote.png" alt="Quote badge" width="18%" />
+  <img src="assets/brand/badges/badge-people.png" alt="People badge" width="18%" />
 </p>
 
-Partner logos never go in this repo. Keep them in the partner's own folder.
+### Motifs (gdgoau.com)
+
+Vector SVGs from the website, drawn from the GDG Figma UI kit: star, arches, slashes, globe, three circles,
+brace, arrows, pill, panel and the notched photo frame.
+
+<p align="center"><img src="docs/motifs.png" alt="Website motifs" width="720" /></p>
+
+### Real photos in the notched frame
+
+<p align="center"><img src="docs/photos.png" alt="GDGOAU photos in notched frames" width="600" /></p>
+
+| Folder | What is in it |
+|---|---|
+| `assets/brand/` | GDG mark (small and large), patterns, frames, elements sheet, sticker, hand-drawn arrow |
+| `assets/brand/banners/` | Wide banners and thin strips in four colours |
+| `assets/brand/badges/` | Round profile badges: globe, quote, people |
+| `assets/motifs/` | Website SVG motifs, PNG versions of star/arches/slashes/globe, `frame-window.svg` |
+| `assets/photos/` | GDGOAU event photos (`class`, `team`, `code`) and notched-frame versions |
+| `assets/campus/oau-gate.png` | Line drawing of an OAU landmark |
+
+How to use them (one motif per slide, notched frames for photos, patterns only behind cards) is in
+[`references/brand.md`](references/brand.md#using-motifs-strict). Partner logos never go in this repo.
 
 ## Repository layout
 
@@ -243,7 +270,7 @@ gdg-oau-design-kit/
 ├── SKILL.md                 # the skill: workflow, hard rules, checklist
 ├── AGENTS.md                # pointer for agents that read AGENTS.md
 ├── references/
-│   ├── brand.md             # colour, type, spacing, logo, motifs
+│   ├── brand.md             # colour, type, spacing, logo, motifs, asset rules
 │   ├── components.md        # exact component specs
 │   ├── writing.md           # house voice and rules
 │   ├── humanizer.md         # vendored humanizer (MIT)
@@ -254,7 +281,7 @@ gdg-oau-design-kit/
 │   ├── social.md            # posts, flyers, banners
 │   └── review.md            # partner's-eye review
 ├── tokens/                  # tokens.css and tokens.json
-├── assets/                  # brand and campus art
+├── assets/                  # brand, motifs, photos and campus art
 ├── templates/
 │   ├── pitch-deck/          # config-driven PPTX generator
 │   └── web/                 # starter page

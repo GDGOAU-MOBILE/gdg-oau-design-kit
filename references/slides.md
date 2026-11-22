@@ -36,13 +36,19 @@ Drop slides 6 and 7 when they do not apply. Never pad to reach a count.
 
 - Two cards facing each other with an icon dot between (the gap).
 - Illustration card on the left, three numbered rows on the right, chips underneath (the event).
-- Three stat cards over one wide organiser strip (who is in the room).
+- Three stat cards over the organiser strip with two notched photos (who is in the room).
 - Three equal cards with icon dots (why this partner).
 - Schedule card with the partner's row highlighted, pills and a paragraph on the right (invitation).
 - Four step cards on a dark slide with the product's app icon by the title (product moment).
 - One large card holding six icon rows in two columns (benefits).
 - Three option cards with a sticker on the recommended one, and a payment strip below (the ask).
 - Chart card on the left, total and receipts cards on the right (money).
+
+## Brand elements on slides
+
+Cards alone look flat. Every deck uses: an official pattern on the cover and closing, real GDGOAU photos in
+notched frames at least once, and one small motif on two or three content slides (never more than one per
+slide). See "Using motifs" in `brand.md`.
 
 ## Build
 

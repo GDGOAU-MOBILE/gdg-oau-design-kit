@@ -16,6 +16,9 @@ const cfgDir = path.dirname(cfgPath);
 const KIT = path.resolve(__dirname, "..", "..");
 const brand = (f) => path.join(KIT, "assets", "brand", f);
 const campus = (f) => path.join(KIT, "assets", "campus", f);
+const motif = (f) => path.join(KIT, "assets", "motifs", f + ".png");
+const photo = (f) => path.join(KIT, "assets", "photos", f);
+const MOTIF_SIZE = { star: [0.42, 0.42], arches: [1.23, 0.2], "slashes-outline": [0.62, 0.53], globe: [0.5, 0.46] };
 const local = (f) => path.resolve(cfgDir, f);
 
 const C = {
@@ -86,7 +89,17 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   const title = (s, arr, o = {}) => {
     const len = parts(arr).map((r) => r.text).join("").length;
     if (len > 42) console.warn(`warning: title "${parts(arr).map((r) => r.text).join("")}" is ${len} characters and may wrap; keep titles to 42 or fewer.`);
-    return T(s, parts(arr, o.color || C.ink), { x: 0.5, y: 0.85, w: 7.7, h: 0.6, fontSize: 28, bold: true, valign: "middle", ...o });
+    const r = T(s, parts(arr, o.color || C.ink), { x: 0.5, y: 0.85, w: 7.7, h: 0.6, fontSize: 28, bold: true, valign: "middle", ...o });
+    // Motif beside the title: { "name": "star", "x": 6.05 }. Set x after checking the render; without it
+    // the position is estimated from the title length and skipped if it might collide with the logos.
+    const m = typeof o.motif === "string" ? { name: o.motif } : o.motif;
+    if (m && MOTIF_SIZE[m.name]) {
+      const [mw, mh] = MOTIF_SIZE[m.name];
+      const x = m.x !== undefined ? m.x : 0.5 + len * 0.215 + 0.3;
+      if (x + mw < 8.15) s.addImage({ path: motif(m.name), x, y: 1.15 - mh / 2, w: mw, h: mh, altText: "" });
+      else console.warn(`warning: motif "${m.name}" skipped on "${parts(arr).map((r) => r.text).join("")}": no room beside the title.`);
+    }
+    return r;
   };
   const sub = (s, text, o = {}) => T(s, text, { x: 0.5, y: 1.47, w: 8.6, h: 0.32, fontSize: 13, color: C.grey, ...o });
   const label = (s, text, o) => T(s, text, { fontFace: MONO, fontSize: 9, color: C.grey, charSpacing: 1, ...o });
@@ -108,7 +121,7 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   T(s, parts(S.cover.subtitle), { x: 1.3, y: 3.22, w: 4.6, h: 0.4, fontSize: 16, valign: "middle" });
   let px = 1.3;
   for (const [t, w] of S.cover.pills) { pill(s, px, 3.9, w, 0.4, t, C.chip, C.ink, { size: 11 }); px += w + 0.15; }
-  s.addImage({ path: campus("oau-gate.png"), x: 5.95, y: 1.95, w: 2.85, h: 2.85 / hallR, altText: "Line drawing of BOOA at OAU" });
+  s.addImage({ path: campus("oau-gate.png"), x: 5.95, y: 1.95, w: 2.85, h: 2.85 / hallR, altText: "Line drawing of an OAU landmark" });
   pill(s, 7.0, 0.52, 1.85, 0.42, "For " + (partner.stickerName || partner.name), P, C.white, { size: 12, rotate: 6 });
 
   // ================= The gap =================
@@ -132,7 +145,7 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   s = pres.addSlide({ masterName: "Content blue", sectionTitle: "The event" });
   title(s, S.event.title); sub(s, S.event.subtitle);
   card(s, 0.5, 2.0, 3.6, 2.65, C.yellow, "Venue");
-  s.addImage({ path: campus("oau-gate.png"), x: 0.72, y: 2.25, w: 3.16, h: 3.16 / hallR, altText: "Line drawing of BOOA at OAU" });
+  s.addImage({ path: campus("oau-gate.png"), x: 0.72, y: 2.25, w: 3.16, h: 3.16 / hallR, altText: "Line drawing of an OAU landmark" });
   label(s, S.event.label, { x: 4.45, y: 2.0, w: 5, h: 0.2 });
   S.event.items.forEach(([h, b], i) => {
     const y = 2.3 + i * 0.66;
@@ -151,20 +164,28 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   title(s, S.room.title); sub(s, S.room.subtitle);
   S.room.stats.forEach(([n, l, d], i) => {
     const x = 0.5 + i * 3.07, col = [C.blue, C.red, C.green][i];
-    card(s, x, 2.0, 2.82, 1.4, col, "Stat " + l);
-    T(s, n, { x: x + 0.22, y: 2.08, w: 2.4, h: 0.62, fontSize: 34, bold: true, color: col, valign: "middle" });
-    T(s, l, { x: x + 0.22, y: 2.72, w: 2.4, h: 0.28, fontSize: 13, bold: true });
-    T(s, d, { x: x + 0.22, y: 3.02, w: 2.45, h: 0.28, fontSize: 10.5, color: C.grey });
+    card(s, x, 2.0, 2.82, 1.3, col, "Stat " + l);
+    T(s, n, { x: x + 0.22, y: 2.05, w: 2.4, h: 0.58, fontSize: 32, bold: true, color: col, valign: "middle" });
+    T(s, l, { x: x + 0.22, y: 2.64, w: 2.4, h: 0.28, fontSize: 13, bold: true });
+    T(s, d, { x: x + 0.22, y: 2.93, w: 2.45, h: 0.28, fontSize: 10.5, color: C.grey });
   });
-  card(s, 0.5, 3.72, 8.95, 1.0, null, "Organiser");
-  s.addImage({ path: brand("gdg-mark.png"), x: 0.75, y: 3.9, w: 0.55, h: 0.31, altText: "Google Developer Groups mark" });
-  label(s, S.room.organiserLabel, { x: 1.45, y: 3.9, w: 3, h: 0.3, valign: "middle", color: C.link });
-  T(s, S.room.organiserText, { x: 0.75, y: 4.25, w: 8.5, h: 0.42, fontSize: 10.5, color: C.grey });
+  card(s, 0.5, 3.55, 8.95, 1.25, null, "Organiser");
+  const photos = S.room.photos || ["class-notched.png", "team-notched.png"];
+  photos.slice(0, 2).forEach((f, i) => {
+    const x = 0.68 + i * 1.12;
+    s.addImage({ path: photo(f), x, y: 3.64, w: 1.07, h: 1.07, altText: "GDGOAU members at a past event" });
+    s.addImage({ path: brand("gdg-mark.png"), x: x + 0.03, y: 3.66, w: 0.27, h: 0.15, altText: "Google Developer Groups mark" });
+  });
+  const tx = photos.length ? 0.68 + Math.min(photos.length, 2) * 1.12 + 0.35 : 0.75;
+  label(s, S.room.organiserLabel, { x: tx, y: 3.7, w: 3, h: 0.22, color: C.link });
+  T(s, S.room.organiserHeadline || "", { x: tx, y: 3.95, w: 8.75 - tx, h: 0.3, fontSize: 14, bold: true });
+  T(s, S.room.organiserText, { x: tx, y: 4.27, w: 8.6 - tx, h: 0.45, fontSize: 10.5, color: C.grey });
+  s.addImage({ path: motif("star"), x: 8.88, y: 3.66, w: 0.4, h: 0.4, altText: "" });
 
   // ================= Why this partner =================
   pres.addSection({ title: "Why " + partner.short });
   s = pres.addSlide({ masterName: "Content blue", sectionTitle: "Why " + partner.short });
-  title(s, S.why.title); sub(s, S.why.subtitle);
+  title(s, S.why.title, { motif: S.why.motif }); sub(s, S.why.subtitle);
   for (const [i, [h, b, ic, col]] of S.why.cards.entries()) {
     const x = 0.5 + i * 3.07, c = colorOf(col);
     card(s, x, 2.0, 2.82, 2.6, c, h);
@@ -177,7 +198,7 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   // ================= Invitation (optional) =================
   if (S.invitation && partner.leader) {
     s = pres.addSlide({ masterName: "Content blue", sectionTitle: "Why " + partner.short });
-    title(s, S.invitation.title); sub(s, S.invitation.subtitle);
+    title(s, S.invitation.title, { motif: S.invitation.motif }); sub(s, S.invitation.subtitle);
     card(s, 0.5, 2.0, 4.7, 2.65, C.blue, "Schedule");
     S.invitation.schedule.forEach(([t, n, hi], i) => {
       const y = 2.35 + i * 0.5;
@@ -214,7 +235,7 @@ async function imgRatio(file) { const m = await sharp(file).metadata(); return m
   // ================= Benefits =================
   pres.addSection({ title: "The ask" });
   s = pres.addSlide({ masterName: "Content blue", sectionTitle: "The ask" });
-  title(s, S.benefits.title); sub(s, S.benefits.subtitle);
+  title(s, S.benefits.title, { motif: S.benefits.motif }); sub(s, S.benefits.subtitle);
   card(s, 0.5, 2.0, 9.0, 2.65, P, "Benefits");
   for (const [i, [h, b, ic, col]] of S.benefits.items.entries()) {
     const x = 0.75 + (i % 2) * 4.4, y = 2.18 + Math.floor(i / 2) * 0.8;

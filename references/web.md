@@ -12,10 +12,24 @@ Import `tokens/tokens.css` (or copy its custom properties) and build from the co
 
 ## Type
 
+- gdgoau.com currently uses **Figtree** (600 to 800) for headings, **Plus Jakarta Sans** for body text and
+  **Google Sans Mono** for labels. Match the live site when you work in its repo. New standalone pages may
+  use Google Sans via `var(--font-sans)`.
 - `font-family: var(--font-sans)` for everything; `var(--font-mono)` for labels and code.
 - Load Google Sans from Google Fonts (`family=Google+Sans:wght@400;500;700`) and Google Sans Code or Roboto
   Mono for labels.
 - Headings sentence case, one highlighted phrase in `var(--link)`.
+
+## What the live site does (copy these patterns)
+
+- Notched photo frames with the GDG mark in the top-left notch, sitting next to a star and a filled pill.
+- Mono kicker pills ("WHAT WE DO", "EVENTS") with a pastel fill and an ink outline, above section titles.
+- Section titles with a full stop on the site ("Learn it. Build it. Share it."): allowed on the web only.
+- Notched panel cards (`assets/motifs/panel.svg` shape) holding one motif in the notch (arches, slashes,
+  arrow, globe).
+- A dark band with a thin arrow and outlined slashes between sections.
+- Community cards slightly rotated and pinned with a coloured tab.
+- Round yellow arrow buttons with ink outlines for carousels.
 
 ## Components
 
